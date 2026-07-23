@@ -27,11 +27,11 @@ jobs:
         with:
           channel: 'stable'
 
-      # 4. Generate folder android jika belum ada & install dependencies
-      - name: Repair Flutter & Install Dependencies
+      # 4. Paksa buat folder android & install dependencies
+      - name: Generate Android Files & Get Pub
         run: |
           cd mobile
-          flutter create . --platforms=android
+          flutter create --platforms=android --force .
           flutter pub get
 
       # 5. Build file APK Release
