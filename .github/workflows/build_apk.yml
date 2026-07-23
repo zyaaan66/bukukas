@@ -27,10 +27,11 @@ jobs:
         with:
           channel: 'stable'
 
-      # 4. Install dependencies proyek Flutter
-      - name: Install Dependencies
+      # 4. Generate folder android jika belum ada & install dependencies
+      - name: Repair Flutter & Install Dependencies
         run: |
           cd mobile
+          flutter create . --platforms=android
           flutter pub get
 
       # 5. Build file APK Release
