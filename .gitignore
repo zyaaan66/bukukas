@@ -1,0 +1,13 @@
+# Ignore backend dependencies & secret files
+backend/node_modules/
+backend/.env
+
+# Ignore Flutter / mobile build & temp files
+mobile/.dart_tool/
+mobile/build/
+mobile/.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
